@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>CrystalsCollector!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -17,15 +19,15 @@
 		</div>
 		<div class="numBox"></div>
 		<div class="winLosee">
-			<div class="text"></div>
+			<div class="number"></div>
 			<p class="win">Wins:</p>
 			<p class="lose">Loses:</p>
 		</div>
 		<div class="gems">
-			<img src="assets/image/ruby.jpg" alt="Ruby" id="ruby">
-			<img src="assets/image/emerald.png" alt="Emerald" id="emerald">
-			<img src="assets/image/Sapphire.png" alt="Sapphire" id="sapphire">
-			<img src="assets/image/topaz.jpg" alt="Topaz" id="topaz">
+			<img src="assets/image/ruby.jpg" alt="Ruby" class="ruby">
+			<img src="assets/image/emerald.png" alt="Emerald" class="emerald">
+			<img src="assets/image/Sapphire.png" alt="Sapphire" class="sapphire">
+			<img src="assets/image/topaz.jpg" alt="Topaz" class="topaz">
 		</div>
 		<div class="score">
 			<p>Your total score is:</p>
@@ -33,32 +35,7 @@
 		<div class="scoreBox"></div>
 	</div>
 
-	<script type="text/javascript">
-		
-		
-		
-		var wins = 0;
-		var loses = 0;
-		var randomNum = 0;
-		var score = 0;
-
-		//function for making random numbers for the set score
-		var random = function(){
-			return Math.floor((Math.random() * 100) + 19);
-		}
-		//push random created number onto the scoreBox div for the set score
-		scoreBox.push(random);
-
-		//set crystals to a value
-
-		//set click on the crystals
-
-		//add numbers of each value, get results
-
-		//compare the current number to the set score, math equal win
-		
-		var 
-
-	</script>
+	<script type="text/javascript" src="game.js"></script>
+	<!--<script type="text/javascript" src="assets/javascript/game.js"></script>-->
 </body>
 </html>
