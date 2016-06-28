@@ -2,21 +2,25 @@
 	width: 100px;
 	height: 100px;
 	float: left;
+	cursor: pointer;
 }
 .emerald{
 	width: 100px;
 	height: 100px;
 	float: left;
+	cursor: pointer;
 }
 .sapphire{
 	width: 100px;
 	height: 100px;
 	float: left;
+	cursor: pointer;
 }
 .topaz{
 	width: 100px;
 	height: 100px;
 	float: left;
+	cursor: pointer;
 }
 .score{
 	clear: left;
