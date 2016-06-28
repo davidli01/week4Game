@@ -4,6 +4,8 @@ var loses = 0;//lose
 var set;//number
 var total = 0;//scoreBox
 
+
+
 var rubyNum = Math.floor(Math.random()*10)+1
 console.log(rubyNum);
 var sapphireNum = Math.floor(Math.random()*10)+1
@@ -18,12 +20,33 @@ document.querySelector(".sapphire").innerHTML = sapphireNum;
 document.querySelector(".emerald").innerHTML = emeraldNum;
 document.querySelector(".topaz").innerHTML = topazNum;
 //assign random number for set number
-var num = Math.floor(Math.random()*20)+30;
-set = num;
+function randomNum() {
+	set = Math.floor(Math.random()*20)+30;
+	return set;
+}
+
+var set = randomNum();
 console.log(set);
 
+//put random number generated into the number box
+document.querySelector('.numBox').innerHTML = set;
 //create onlcick function to add the value of each img clicked
-document.getElementByTagName("img").onclick = function(){
+
+function addNum(a) {
+	if (a.getAttribute('class') == 'ruby'){
+		total = total + rubyNum;
+	}else if (a.getAttribute('class') == 'emerald'){
+		total = total + emeraldNum;
+	}else if (a.getAttribute('class') == 'sapphire'){
+		total = total + sapphireNum;
+	}else{
+		total = total + topazNum;
+	}
+}
+
+document.querySelectorAll("img").onclick = function(){
+	randomNum();
+	addNum();
 
 }
 
@@ -32,9 +55,6 @@ document.getElementByTagName("img").onclick = function(){
 //win and lose, if/else
 
 //reset set value and randomize img value
-
-
-
 
 
 
