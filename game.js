@@ -3,48 +3,53 @@ var loses = 0;//lose
 
 var set;//number
 var total = 0;//scoreBox
+var images = crystalNum;
 
 //create crystal object to work with, future add attributes
 function crystalNum(){
+	//use return to execute what is in the code block immediately after calling
 	return{
+		//creating object for the 4 crystals, with number and image src 
 		'ruby' : {
-			number: Math.floor(Math.random()*10)+1;
+			number: Math.floor(Math.random()*10)+1,
 			image: "assets/image/ruby.jpg"
 		},
 		'sapphire' : {
-			number: Math.floor(Math.random()*10)+1;
+			number: Math.floor(Math.random()*10)+1,
 			image: "assets/image/Sapphire.png"
 		},
 		'emerald' : {
-			number: Math.floor(Math.random()*10)+1;
+			number: Math.floor(Math.random()*10)+1,
 			image: "assets/image/emerald.png"
 		},
 		'topaz' : {
-			number: Math.floor(Math.random()*10)+1;
+			number: assets/image/ruby.jpg
 			image: "assets/image/topaz.jpg"
 		}
 	};
 }
 
+var elem = document.createElement("img");
+//set attributes for img tag
+elem.setAttribute("class", "ruby")
+elem.setAttribute("src", "assets/image/ruby.jpg")
+elem.setAttribute("data-num", "")
 //create img for the page and include the data
-function addElement() {
-	for (var prop in crystals)
-	var box = document.querySelector('.crystalBox');
-	console.log(box);
-	var crystals = document.createElement("<div class='button' data-num='" +')
+//create a function, state the parameters/arguments that will be used in the function
+function addElement(el, attrs) { //el = element, attrs = attributes that will be used
+//create a for to 
+	for (var prop in attrs){
+		el.setAttribute(prop, attrs[prop]);
+	}
 }
 
-addElement()
-	function renderCrystals(){
-		//render crystals
-		for (var key in crystals) {
-			var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
-		  	var crystalImg = $("<img alt='image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
-		    crystalDiv.append(crystalImg);
-		    $("#crystal-area").append(crystalDiv);
-		}
-	}
+img = crystalNum();
+console.log(img);
+var elem = document.createElement()
+addElement(.crystalBox, );
 
+
+/*
 var rubyNum = Math.floor(Math.random()*10)+1
 console.log(rubyNum);
 var sapphireNum = Math.floor(Math.random()*10)+1
@@ -53,6 +58,7 @@ var topazNum = Math.floor(Math.random()*10)+1
 console.log(sapphireNum);
 console.log(emeraldNum);
 console.log(topazNum);
+*/
 /*
 //assign the randon numbers above to the images (class)
 document.querySelector(".ruby").innerHTML = rubyNum;
