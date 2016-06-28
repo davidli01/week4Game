@@ -4,7 +4,46 @@ var loses = 0;//lose
 var set;//number
 var total = 0;//scoreBox
 
+//create crystal object to work with, future add attributes
+function crystalNum(){
+	return{
+		'ruby' : {
+			number: Math.floor(Math.random()*10)+1;
+			image: "assets/image/ruby.jpg"
+		},
+		'sapphire' : {
+			number: Math.floor(Math.random()*10)+1;
+			image: "assets/image/Sapphire.png"
+		},
+		'emerald' : {
+			number: Math.floor(Math.random()*10)+1;
+			image: "assets/image/emerald.png"
+		},
+		'topaz' : {
+			number: Math.floor(Math.random()*10)+1;
+			image: "assets/image/topaz.jpg"
+		}
+	};
+}
 
+//create img for the page and include the data
+function addElement() {
+	for (var prop in crystals)
+	var box = document.querySelector('.crystalBox');
+	console.log(box);
+	var crystals = document.createElement("<div class='button' data-num='" +')
+}
+
+addElement()
+	function renderCrystals(){
+		//render crystals
+		for (var key in crystals) {
+			var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
+		  	var crystalImg = $("<img alt='image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
+		    crystalDiv.append(crystalImg);
+		    $("#crystal-area").append(crystalDiv);
+		}
+	}
 
 var rubyNum = Math.floor(Math.random()*10)+1
 console.log(rubyNum);
@@ -14,11 +53,13 @@ var topazNum = Math.floor(Math.random()*10)+1
 console.log(sapphireNum);
 console.log(emeraldNum);
 console.log(topazNum);
+/*
 //assign the randon numbers above to the images (class)
 document.querySelector(".ruby").innerHTML = rubyNum;
 document.querySelector(".sapphire").innerHTML = sapphireNum;
 document.querySelector(".emerald").innerHTML = emeraldNum;
 document.querySelector(".topaz").innerHTML = topazNum;
+*/
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -46,7 +87,7 @@ function addNum(a) {
 
 document.querySelectorAll("img").onclick = function(){
 	randomNum();
-	addNum();
+	addNum(this);
 
 }
 
