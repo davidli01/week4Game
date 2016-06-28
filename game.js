@@ -3,50 +3,36 @@ var loses = 0;//lose
 
 var set;//number
 var total = 0;//scoreBox
-var images = crystalNum;
 
-//create crystal object to work with, future add attributes
-function crystalNum(){
-	//use return to execute what is in the code block immediately after calling
-	return{
-		//creating object for the 4 crystals, with number and image src 
-		'ruby' : {
-			number: Math.floor(Math.random()*10)+1,
-			image: "assets/image/ruby.jpg"
-		},
-		'sapphire' : {
-			number: Math.floor(Math.random()*10)+1,
-			image: "assets/image/Sapphire.png"
-		},
-		'emerald' : {
-			number: Math.floor(Math.random()*10)+1,
-			image: "assets/image/emerald.png"
-		},
-		'topaz' : {
-			number: assets/image/ruby.jpg
-			image: "assets/image/topaz.jpg"
-		}
-	};
-}
-
-var elem = document.createElement("img");
+var elem1 = document.createElement("img");
 //set attributes for img tag
-elem.setAttribute("class", "ruby")
-elem.setAttribute("src", "assets/image/ruby.jpg")
-elem.setAttribute("data-num", "")
-//create img for the page and include the data
-//create a function, state the parameters/arguments that will be used in the function
-function addElement(el, attrs) { //el = element, attrs = attributes that will be used
-//create a for to 
-	for (var prop in attrs){
-		el.setAttribute(prop, attrs[prop]);
-	}
-}
+elem1.setAttribute("class", "ruby");
+elem1.setAttribute("src", "assets/image/ruby.jpg");
+elem1.setAttribute("data-num", "Math.floor(Math.random()*10)+1");
+//append this new elem1 on to box1 
+document.querySelector(".box1").appendChild(elem1);
 
-img = crystalNum();
-console.log(img);
-var elem = document.createElement()
-addElement(.crystalBox, );
+var elem2 = document.createElement("img");
+elem2.setAttribute("class", "sapphire");
+elem2.setAttribute("src", "assets/image/Sapphire.png");
+elem2.setAttribute("data-num", "Math.floor(Math.random()*10)+1");
+document.querySelector(".box2").appendChild(elem2);
+
+var elem3 = document.createElement("img");
+elem3.setAttribute("class", "emerald");
+elem3.setAttribute("src", "assets/image/emerald.png");
+elem3.setAttribute("data-num", "Math.floor(Math.random()*10)+1");
+document.querySelector(".box3").appendChild(elem3);
+
+var elem4 = document.createElement("img");
+elem4.setAttribute("class", "topaz");
+elem4.setAttribute("src", "assets/image/topaz.jpg");
+elem4.setAttribute("data-num", "Math.floor(Math.random()*10)+1");
+document.querySelector(".box4").appendChild(elem4);
+
+
+
+
 
 
 /*

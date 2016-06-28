@@ -1,16 +1,23 @@
 .ruby{
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 .emerald{
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 .sapphire{
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 .topaz{
 	width: 100px;
 	height: 100px;
+	float: left;
+}
+.score{
+	clear: left;
 }
