@@ -59,6 +59,7 @@ console.log(set);
 //put random number generated into the number box
 document.querySelector('.numBox').innerHTML = set;
 //function if/else, when clicking on each img what will happen
+/*
 function addNum() {
 	var gem = document.querySelectorAll('img');
 	var number = gem.getAttribute('data-num');
@@ -80,6 +81,13 @@ function addNum() {
 addNum();
 console.log(number);
 console.log(total);
+*/
+
+//get attributes for gem elements
+var gem = document.querySelectorAll('img');
+console.log(gem);
+var number = gem[0].dataset.num;
+console.log(number);
 document.querySelectorAll("img").onclick = addNum;
 
 
