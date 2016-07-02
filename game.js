@@ -59,16 +59,17 @@ console.log(set);
 //put random number generated into the number box
 document.querySelector('.numBox').innerHTML = set;
 //function if/else, when clicking on each img what will happen
-function addNum(self) {
-	var number = self.getAttribute('data-num');
+function addNum() {
+	var gem = document.querySelectorAll('img');
+	var number = gem.getAttribute('data-num');
 	console.log(number);
-	if (self.getAttribute('class') == 'ruby'){
+	if (this.getAttribute('class') == 'ruby'){
 		total = total + number;
-	}else if (self.getAttribute('class') == 'emerald'){
+	}else if (this.getAttribute('class') == 'emerald'){
 		total = total + number;
-	}else if (self.getAttribute('class') == 'sapphire'){
+	}else if (this.getAttribute('class') == 'sapphire'){
 		total = total + number;
-	}else if(self.getAttribute('class') == topaz){
+	}else if(this.getAttribute('class') == 'topaz'){
 		total = total + number;
 	}
 
@@ -76,6 +77,9 @@ function addNum(self) {
 	score.innerHTML = total;
 	return total;
 }
-console.log(addNum.number);
+addNum();
+console.log(number);
+console.log(total);
 document.querySelectorAll("img").onclick = addNum;
+
 
