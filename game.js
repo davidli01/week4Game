@@ -4,15 +4,12 @@ var loses = 0;//lose
 var set;//number
 var total = 0;//scoreBox
 
-var ruby = document.querySelector(".ruby").value = Math.floor(Math.random()*10)+1;
+var ruby = document.querySelector(".ruby").getAttribute('data-num');
 var emerald = document.querySelector(".emerald").value = Math.floor(Math.random()*10)+1;
 var topaz = document.querySelector(".topaz").value = Math.floor(Math.random()*10)+1;
 var sapphire = document.querySelector(".sapphire").value = Math.floor(Math.random()*10)+1;
 
 console.log(ruby);
-
-var rubyNum = Math.floor(Math.random()*10)+1;
-console.log(rubyNum);
 
 //assign random number for set number
 function randomNum() {
@@ -20,22 +17,24 @@ function randomNum() {
 	return set;
 }
 var set = randomNum();
-console.log(set);
+//console.log(set);
 //put random number generated into the number box
 document.querySelector('.numBox').innerHTML = set;
+
+
 //function if/else, when clicking on each img what will happen
 /*
-function addNum() {
-	var gem = document.querySelectorAll('img');
-	var number = gem.getAttribute('data-num');
-	console.log(number);
-	if (this.getAttribute('class') == 'ruby'){
+function addNum(e) {
+	var this = e;
+	var number = this.value;
+
+	if (this.getAttribute('class') === 'ruby'){
 		total = total + number;
-	}else if (this.getAttribute('class') == 'emerald'){
+	}else if (this.getAttribute('class') === 'emerald'){
 		total = total + number;
-	}else if (this.getAttribute('class') == 'sapphire'){
+	}else if (this.getAttribute('class') === 'sapphire'){
 		total = total + number;
-	}else if(this.getAttribute('class') == 'topaz'){
+	}else if(this.getAttribute('class') === 'topaz'){
 		total = total + number;
 	}
 
@@ -43,11 +42,14 @@ function addNum() {
 	score.innerHTML = total;
 	return total;
 }
-addNum();
+
+document.querySelectorAll('input').onclick = addNum;
+
+
 console.log(number);
 console.log(total);
-*/
 
+*/
 
 /*
 //get attributes for gem elements (data-num)
