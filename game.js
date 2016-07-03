@@ -83,11 +83,18 @@ console.log(number);
 console.log(total);
 */
 
-//get attributes for gem elements
+//get attributes for gem elements (data-num)
 var gem = document.querySelectorAll('img');
 console.log(gem);
-var number = gem[0].dataset.num;
-console.log(number);
+var img1 = gem[0].dataset.num;
+console.log(img1);
+var img2 = gem[1].dataset.num;
+var img3 = gem[2].dataset.num;
+var img4 = gem[3].dataset.num;
+
+function addnum() {
+	if ()
+}
 document.querySelectorAll("img").onclick = addNum;
 
 
