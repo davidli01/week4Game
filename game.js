@@ -3,14 +3,14 @@ var loses = 0;//lose
 
 var set;//number
 var total = 0;//scoreBox
-
+/*
 var ruby = document.querySelector(".ruby").getAttribute('data-num');
 var emerald = document.querySelector(".emerald").value = Math.floor(Math.random()*10)+1;
 var topaz = document.querySelector(".topaz").value = Math.floor(Math.random()*10)+1;
 var sapphire = document.querySelector(".sapphire").value = Math.floor(Math.random()*10)+1;
 
 console.log(ruby);
-
+*/
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -23,12 +23,16 @@ document.querySelector('.numBox').innerHTML = set;
 
 
 //function if/else, when clicking on each img what will happen
+var number = document.querySelectorAll('img');
+console.log(number);
+var gemNum = number[1].getAttribute(data-num);
+console.log(gemNum);
 /*
-function addNum(e) {
-	var this = e;
-	var number = this.value;
+function addNum(this) {
+	var self = this;
+	var number = self.data-num;
 
-	if (this.getAttribute('class') === 'ruby'){
+	if (self.getAttribute('data-num') === 'ruby'){
 		total = total + number;
 	}else if (this.getAttribute('class') === 'emerald'){
 		total = total + number;
@@ -42,7 +46,8 @@ function addNum(e) {
 	score.innerHTML = total;
 	return total;
 }
-
+*/
+/*
 document.querySelectorAll('input').onclick = addNum;
 
 
