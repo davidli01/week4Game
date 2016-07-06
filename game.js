@@ -3,14 +3,23 @@ var loses = 0;//lose
 
 var set;//number
 var total = 0;//scoreBox
-/*
-var ruby = document.querySelector(".ruby").getAttribute('data-num');
-var emerald = document.querySelector(".emerald").value = Math.floor(Math.random()*10)+1;
-var topaz = document.querySelector(".topaz").value = Math.floor(Math.random()*10)+1;
-var sapphire = document.querySelector(".sapphire").value = Math.floor(Math.random()*10)+1;
 
-console.log(ruby);
-*/
+//assign gems data-num attribute to hold random generated number
+var elRuby = document.querySelector('.ruby');
+var elEmerald = document.querySelector('.emerald');
+var elSapphire = document.querySelector('.sapphire');
+var elTopaz = document.querySelector('.topaz');
+//setAttribute('data-num', Math.floor(Math.random()*10)+1);
+var numRuby = elRuby.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+
+console.log(elRuby);
+console.log(elEmerald);
+console.log(numRuby);
+console.log(numSapphire);
+
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -21,12 +30,27 @@ var set = randomNum();
 //put random number generated into the number box
 document.querySelector('.numBox').innerHTML = set;
 
+//function
+function addNum(e){
+	var gem = e.target;
+	console.log(gem);
+}
 
+var el = document.querySelectorAll('img');
+document.querySelectorAll('img').onclick = addNum;
+
+
+
+
+
+
+/*
 //function if/else, when clicking on each img what will happen
 var number = document.querySelectorAll('img');
 console.log(number);
 var gemNum = number[1].getAttribute(data-num);
 console.log(gemNum);
+*/
 /*
 function addNum(this) {
 	var self = this;
