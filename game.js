@@ -15,11 +15,12 @@ var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*1
 var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 
-console.log(elRuby);
+var ruby = elRuby.getAttribute('data-num');
+console.log(ruby);
 // console.log(elEmerald);
 console.log(numRuby);
 // console.log(numSapphire);
-/*
+
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -54,7 +55,7 @@ document.querySelectorAll('img').onclick = alert;
 
 
 
-*/
+
 
 
 /*
