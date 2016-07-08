@@ -15,11 +15,11 @@ var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*1
 var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 
-// console.log(elRuby);
+console.log(elRuby);
 // console.log(elEmerald);
-// console.log(numRuby);
+console.log(numRuby);
 // console.log(numSapphire);
-
+/*
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -38,6 +38,12 @@ function addNum(e){
 
 }
 
+function matchNum(this){
+	if (this.getAttribute('class') === "ruby") {
+		total = total + elRuby
+	}
+}
+
 
 function alert(){
 	alert('hi');
@@ -48,7 +54,7 @@ document.querySelectorAll('img').onclick = alert;
 
 
 
-
+*/
 
 
 /*
