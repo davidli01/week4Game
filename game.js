@@ -14,19 +14,15 @@ var numRuby = elRuby.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
 var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-
+//retrieves the data-num successfully
 var ruby = elRuby.getAttribute('data-num');
 var sapphire = elSapphire.getAttribute('data-num');
 var emerald = elEmerald.getAttribute('data-num');
 var topaz = elTopaz.getAttribute('data-num');
-console.log(ruby);
-console.log(emerald);
-console.log(sapphire);
-console.log(topaz);
-// console.log(elEmerald);
-//console.log(numRuby);
-// console.log(numSapphire);
-/*
+//console.log(ruby);
+//console.log(emerald);
+//console.log(sapphire);
+//console.log(topaz);
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
@@ -37,30 +33,21 @@ var set = randomNum();
 //put random number generated into the number box
 document.querySelector('.numBox').innerHTML = set;
 
+//-------------------------
 //function
-function addNum(e){
-	var gem = e.target;
+function addNum(event){
+	var gem = event.target;
+	alert(gem);
 	return gem;
 	console.log(gem);
-
 }
-
-function matchNum(this){
-	if (this.getAttribute('class') === "ruby") {
-		total = total + elRuby
-	}
-}
-
-
-function alert(){
-	alert('hi');
-}
-
+console.log(addNum);
 var el = document.querySelectorAll('img');
-document.querySelectorAll('img').onclick = alert;
+document.querySelectorAll('img').onclick = addNum();
+
+console.log(el);
 
 
-*/
 
 
 
