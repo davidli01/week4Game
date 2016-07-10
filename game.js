@@ -36,16 +36,17 @@ document.querySelector('.numBox').innerHTML = set;
 //-------------------------
 //function
 function addNum(event){
-	var gem = event.target;
-	alert(gem);
-	return gem;
-	console.log(gem);
+	var al = alert('hi');
+	return al;
 }
 console.log(addNum);
-var el = document.querySelectorAll('img');
-document.querySelectorAll('img').onclick = addNum();
 
-console.log(el);
+//Loop through the nodelist to apply event to all elements in the list.
+var list = document.querySelectorAll('img');
+for (var i = 0; i < list.length; i++) {
+	el[i].onclick = addNum;
+}
+
 
 
 
