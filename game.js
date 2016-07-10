@@ -34,22 +34,41 @@ var set = randomNum();
 document.querySelector('.numBox').innerHTML = set;
 
 //-------------------------
-//function
+function resetTotal(){
+	total = 0;
+	document.querySelector(".scoreBox").innerHTML = total;
+	document.querySelector('.numBox').innerHTML = randomNum();
+}
 
+//function that retrieves the data-num
+//need to place event object in parameter to use event properties
 function num(e){
+	//target, gets the element that triggered a specific event
 	var target = e.target;
-	var gemNum = target.getAttribute('data-num');
-	console.log(gemNum);
+	//selected elemenet get attribute
+	var gemNum = parseInt(target.getAttribute('data-num'));
+	//console.log(gemNum);
+	//if match set number stop adding else keep running
+	//console.log(total);
+	console.log(set);
+	total = total + gemNum;
+	console.log(total);
+	document.querySelector(".scoreBox").innerHTML = total;
+	if (total === set) {
+		alert("WIN!");
+		wins++
+		document.querySelector(".win").innerHTML = wins;
+		resetTotal();
+		target = Math.floor(Math.random()*10)+1;
+	}else if (total > set) {
+		alert("LOSE!");
+		loses++
+		document.querySelector(".lose").innerHTML = loses;
+		resetTotal();
+		target = Math.floor(Math.random()*10)+1;
+	}
+}
 
-}
-/*
-function addNum(event){
-	var list = document.querySelectorAll('img');
-	for (var i = 0; i < list.length; i++) {
-		var gem = list[i].getAttribute('data-num');
-		console.log(gem);
-}
-*/
 
 //Loop through the nodelist to apply event to all elements in the list.
 //store the nodelist in 'list'
@@ -58,61 +77,3 @@ var list = document.querySelectorAll('img');
 for (var i = 0; i < list.length; i++) {
 	list[i].onclick = num;
 }
-
-
-
-
-
-
-/*
-//function if/else, when clicking on each img what will happen
-var number = document.querySelectorAll('img');
-console.log(number);
-var gemNum = number[1].getAttribute(data-num);
-console.log(gemNum);
-*/
-/*
-function addNum(this) {
-	var self = this;
-	var number = self.data-num;
-
-	if (self.getAttribute('data-num') === 'ruby'){
-		total = total + number;
-	}else if (this.getAttribute('class') === 'emerald'){
-		total = total + number;
-	}else if (this.getAttribute('class') === 'sapphire'){
-		total = total + number;
-	}else if(this.getAttribute('class') === 'topaz'){
-		total = total + number;
-	}
-
-	var score = document.querySelector('.scoreBox');
-	score.innerHTML = total;
-	return total;
-}
-*/
-/*
-document.querySelectorAll('input').onclick = addNum;
-
-
-console.log(number);
-console.log(total);
-
-*/
-
-/*
-//get attributes for gem elements (data-num)
-var gem = document.querySelectorAll('img');
-console.log(gem);
-var img1 = gem[0].dataset.num;
-console.log(img1);
-var img2 = gem[1].dataset.num;
-var img3 = gem[2].dataset.num;
-var img4 = gem[3].dataset.num;
-
-function addnum() {
-	if ()
-}
-document.querySelectorAll("img").onclick = addNum;
-
-*/
