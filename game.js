@@ -10,10 +10,13 @@ var elEmerald = document.querySelector('.emerald');
 var elSapphire = document.querySelector('.sapphire');
 var elTopaz = document.querySelector('.topaz');
 //setAttribute('data-num', Math.floor(Math.random()*10)+1);
-var numRuby = elRuby.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+function newNum(){
+	var numRuby = elRuby.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+	var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+	var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+	var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+}
+newNum();
 //retrieves the data-num successfully
 var ruby = elRuby.getAttribute('data-num');
 var sapphire = elSapphire.getAttribute('data-num');
@@ -55,17 +58,18 @@ function num(e){
 	console.log(total);
 	document.querySelector(".scoreBox").innerHTML = total;
 	if (total === set) {
-		alert("WIN!");
+		document.querySelector(".board").innerHTML = "YOU WIN!";
 		wins++
-		document.querySelector(".win").innerHTML = wins;
+		document.querySelector(".win").innerHTML = "Wins: " + wins;
 		resetTotal();
-		target = Math.floor(Math.random()*10)+1;
+		newNum();
+		//target = Math.floor(Math.random()*10)+1;
 	}else if (total > set) {
-		alert("LOSE!");
+		document.querySelector(".board").innerHTML = "YOU LOSE!";
 		loses++
-		document.querySelector(".lose").innerHTML = loses;
+		document.querySelector(".lose").innerHTML = "Loses: " + loses;
 		resetTotal();
-		target = Math.floor(Math.random()*10)+1;
+		newNum();
 	}
 }
 
