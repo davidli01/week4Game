@@ -4,28 +4,14 @@ var loses = 0;//lose
 var set;//number
 var total = 0;//scoreBox
 
-//assign gems data-num attribute to hold random generated number
-var elRuby = document.querySelector('.ruby');
-var elEmerald = document.querySelector('.emerald');
-var elSapphire = document.querySelector('.sapphire');
-var elTopaz = document.querySelector('.topaz');
-//setAttribute('data-num', Math.floor(Math.random()*10)+1);
+//function for random number to gems
 function newNum(){
-	var numRuby = elRuby.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-	var numSapphire = elSapphire.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-	var numEmerald = elEmerald.setAttribute('data-num', Math.floor(Math.random()*10)+1);
-	var numTopaz = elTopaz.setAttribute('data-num', Math.floor(Math.random()*10)+1);
+	var elGem = document.querySelectorAll('img');
+	for (var i = 0; i < elGem.length; i++)
+		elGem[i].setAttribute('data-num', Math.floor(Math.random()*10)+1);
 }
 newNum();
-//retrieves the data-num successfully
-var ruby = elRuby.getAttribute('data-num');
-var sapphire = elSapphire.getAttribute('data-num');
-var emerald = elEmerald.getAttribute('data-num');
-var topaz = elTopaz.getAttribute('data-num');
-//console.log(ruby);
-//console.log(emerald);
-//console.log(sapphire);
-//console.log(topaz);
+
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
