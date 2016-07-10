@@ -15,18 +15,18 @@ newNum();
 //assign random number for set number
 function randomNum() {
 	set = Math.floor(Math.random()*20)+30;
+	document.querySelector('.numBox').innerHTML = set;
 	return set;
 }
-var set = randomNum();
 //console.log(set);
 //put random number generated into the number box
-document.querySelector('.numBox').innerHTML = set;
+randomNum();
 
 //-------------------------
 function resetTotal(){
 	total = 0;
 	document.querySelector(".scoreBox").innerHTML = total;
-	document.querySelector('.numBox').innerHTML = randomNum();
+	randomNum();
 }
 
 //function that retrieves the data-num
