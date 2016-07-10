@@ -35,16 +35,28 @@ document.querySelector('.numBox').innerHTML = set;
 
 //-------------------------
 //function
-function addNum(event){
-	var al = alert('hi');
-	return al;
+
+function num(e){
+	var target = e.target;
+	var gemNum = target.getAttribute('data-num');
+	console.log(gemNum);
+
 }
-console.log(addNum);
+/*
+function addNum(event){
+	var list = document.querySelectorAll('img');
+	for (var i = 0; i < list.length; i++) {
+		var gem = list[i].getAttribute('data-num');
+		console.log(gem);
+}
+*/
 
 //Loop through the nodelist to apply event to all elements in the list.
+//store the nodelist in 'list'
 var list = document.querySelectorAll('img');
+//create loop with list
 for (var i = 0; i < list.length; i++) {
-	el[i].onclick = addNum;
+	list[i].onclick = num;
 }
 
 
