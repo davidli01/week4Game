@@ -29,6 +29,9 @@ function resetTotal(){
 	randomNum();
 }
 
+function invis(){
+	document.querySelector('.board').innerHTML = " ";
+}
 //function that retrieves the data-num
 //need to place event object in parameter to use event properties
 function num(e){
@@ -49,13 +52,15 @@ function num(e){
 		document.querySelector(".win").innerHTML = "Wins: " + wins;
 		resetTotal();
 		newNum();
+		var myVar = setInterval(invis, 3000);
 		//target = Math.floor(Math.random()*10)+1;
 	}else if (total > set) {
-		document.querySelector(".board").innerHTML = "YOU LOSE!";
+		document.querySelector(".board").innerHTML = "YOU LOSE! TRY AGAIN!";
 		loses++
 		document.querySelector(".lose").innerHTML = "Loses: " + loses;
 		resetTotal();
 		newNum();
+		var myVar = setInterval(invis, 3000);
 	}
 }
 
