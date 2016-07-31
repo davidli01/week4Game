@@ -1,3 +1,6 @@
+html {
+	background-image: url("http://jeddahworldacademy.edu.sa/wp-content/uploads/bg.jpg")
+}
 header {
 	display: block;
 }
@@ -7,28 +10,31 @@ p {
 }
 
 h1{
-	font-family: inherit;
+	font-family: Impact, Charcoal, sans-serif;
 	font-weight: 500;
-	line-height: 1.1;
-	color: inherit;
-	margin-top: 20px;
-	margin-bottom: 10px;
 	font-size: 50px;
+	margin-bottom: auto;
+	color: #238096;
+	margin-top: auto;
 	text-align: center;
 }
 img {
   vertical-align: middle;
 }
-
+.winLosee {
+	
+}
 
 .board {
-	font-size: 60px;
-	color: blue;
+	font-size: 40px;
+	color: #4D94FF;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }
 p,
 .inputMsg {
-	font-size: 24px;
-	color: blue;
+	font-size: 18px;
+	color: #11ACA7;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }
 .numBox, 
 .scoreBox{
@@ -40,7 +46,7 @@ p,
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	font-family: sans-serif;
+	background-image: url("http://jeddahworldacademy.edu.sa/wp-content/uploads/bg.jpg")
 	}
 
 @media (min-width: 768px) {
